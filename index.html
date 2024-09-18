@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <title>OBJ MODELING</title>
+</head>
+
+<body onload="main()">
+  <div class='grid-container'>
+    <h1 class='item1 title'>OBJECT MODELING APP</h1>
+    <div class='item2'>
+      <Canvas id='webgl' width='700' height='900'>
+        Please use a browser that supports canvas.
+      </Canvas>
+    </div>
+    <div class='item3'>
+      <div>
+        <p>Click to create a figure</p>
+        <button id="pyramid">Pyramid</button>
+        <button id="cube">Cube</button>
+      </div>
+      <button id="reset">Reset Controls</button>
+      <h3>Controls</h3>
+      <!--  Move, rotate and scale in XYZ -->
+      <p>Rotate X</p>
+      <div class="slidecontainer">
+        -180
+        <input type="range" min="-180" max="180" value="0" class="slider" id="rotateX">
+        180
+      </div>
+      <p>Rotate Y</p>
+      <div class="slidecontainer">
+        -180
+        <input type="range" min="-180" max="180" value="0" class="slider" id="rotateY">
+        180
+      </div>
+      <p>Rotate Z</p>
+      <div class="slidecontainer">
+        -180
+        <input type="range" min="-180" max="180" value="0" class="slider" id="rotateZ">
+        180
+      </div>
+      <p>Scale X</p>
+      <div class="slidecontainer">
+        1
+        <input type="range" min="1" max="5" value="1" class="slider" id="scaleX">
+        5
+      </div>
+      <p>Scale Y</p>
+      <div class="slidecontainer">
+        1
+        <input type="range" min="1" max="5" value="1" class="slider" id="scaleY">
+        5
+      </div>
+      <p>Scale Z</p>
+      <div class="slidecontainer">
+        1
+        <input type="range" min="1" max="5" value="1" class="slider" id="scaleZ">
+        5
+      </div>
+      <p>Move X</p>
+      <div class="slidecontainer">
+        -100
+        <input type="range" min="-100" max="100" value="0" class="slider" id="moveX">
+        100
+      </div>
+      <p>Move Y</p>
+      <div class="slidecontainer">
+        -100
+        <input type="range" min="-100" max="100" value="0" class="slider" id="moveY">
+        100
+      </div>
+      <p>Move Z</p>
+      <div class="slidecontainer">
+        -1
+        <input type="range" min="-1" max="1" value="0" class="slider" id="moveZ">
+        1
+      </div>
+    </div>
+    <h3 class='item4 footer'>Made by: <i><b>Diego Jiménez</b></i> </h3>
+  </div>
+
+  <script src="lib/webgl-utils.js"></script>
+  <script src="lib/webgl-debug.js"></script>
+  <script src="lib/cuon-utils.js"></script>
+  <script src="lib/cuon-matrix.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
